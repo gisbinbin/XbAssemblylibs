@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">xblibrary</string>
+    <string name="scanstr">请将扫描框对准二维码</string>
+    <string name="scantoolstr">扫一扫</string>
+</resources>

@@ -1,4 +1,4 @@
-package com.xb.xblibrary.decoding;
+package com.xb.xblibrary.zxing.decoding;
 
 /**
  * Created by binbin1058 on 2018/1/6.

@@ -6,7 +6,7 @@ import android.view.View;
 import com.xb.xblibrary.view.BaseScanActivity;
 
 /**
- * Created by Administrator on 2018/4/20.
+ * Created by binbin1058 on 2018/4/20.
  */
 
 public class QRScanActivity extends BaseScanActivity {

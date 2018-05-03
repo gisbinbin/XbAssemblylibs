@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/main_panel"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
         android:id="@+id/scan_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="扫一扫"/>
+    <Button
+        android:id="@+id/list_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PullToRefreshSwipeMenuListView"/>
+    <Button
+        android:id="@+id/inputdata_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时间输入"/>
 </LinearLayout>

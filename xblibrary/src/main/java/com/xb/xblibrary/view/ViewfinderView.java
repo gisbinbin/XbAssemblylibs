@@ -31,16 +31,14 @@ import android.view.View;
 
 import com.google.zxing.ResultPoint;
 import com.xb.xblibrary.R;
-import com.xb.xblibrary.camera.CameraManager;
+import com.xb.xblibrary.zxing.camera.CameraManager;
 
 import java.util.Collection;
 import java.util.HashSet;
 
 /**
- * This view is overlaid on top of the camera preview. It adds the viewfinder
- * rectangle and partial transparency outside it, as well as the laser scanner
- * animation and result points.
- * 
+ * Created by binbin1058 on 2018/4/27.
+ * 扫描控件
  */
 public final class ViewfinderView extends View {
 	private static final long ANIMATION_DELAY = 10L;

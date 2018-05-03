@@ -44,12 +44,12 @@ import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeReader;
 import com.xb.xblibrary.R;
-import com.xb.xblibrary.camera.CameraManager;
-import com.xb.xblibrary.decoding.CaptureActivityHandler;
-import com.xb.xblibrary.decoding.InactivityTimer;
-import com.xb.xblibrary.decoding.IsChineseOrNot;
-import com.xb.xblibrary.decoding.RGBLuminanceSource;
-import com.xb.xblibrary.utils.Utils;
+import com.xb.xblibrary.zxing.camera.CameraManager;
+import com.xb.xblibrary.zxing.decoding.CaptureActivityHandler;
+import com.xb.xblibrary.zxing.decoding.InactivityTimer;
+import com.xb.xblibrary.zxing.decoding.IsChineseOrNot;
+import com.xb.xblibrary.zxing.decoding.RGBLuminanceSource;
+import com.xb.xblibrary.zxing.utils.Utils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -58,7 +58,8 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 /**
- * Created by Administrator on 2018/4/20.
+ * Created by binbin1058 on 2018/4/20.
+ * 二维码扫描基础窗口
  */
 
 public abstract class BaseScanActivity  extends Activity implements SurfaceHolder.Callback {

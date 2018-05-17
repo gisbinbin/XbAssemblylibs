@@ -117,8 +117,8 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
             }
         }
         CameraManager.init(getApplication());
-        surfaceView=findViewById(initSurfaceView());
-        viewfinderView=findViewById(initViewfinderView());
+        surfaceView= (SurfaceView)findViewById(initSurfaceView());
+        viewfinderView= (ViewfinderView)findViewById(initViewfinderView());
         if(surfaceView==null||viewfinderView==null) {
             Log.e("BaseScanActivity", "BaseScanActivity init fail");
             finish();
@@ -257,6 +257,7 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
      * @param barcode  扫描的图片
      */
     public void handleDecode(Result result, Bitmap barcode) {
+        CameraManager.get().turnOffHandler();
         inactivityTimer.onActivity();
         playBeepSoundAndVibrate();
         String resultString = result.getText();

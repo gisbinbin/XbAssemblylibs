@@ -14,5 +14,5 @@ Step 1. 将JITPACK存储库添加到build.gradle文件中
 Step 2. 添加依赖项
 
 	dependencies {
-		compile 'com.github.gisbinbin:XbAssemblylibs:1.0.0'
+		compile 'com.github.gisbinbin:XbAssemblylibs:1.0.4'
 	}

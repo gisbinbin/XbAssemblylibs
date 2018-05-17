@@ -185,6 +185,17 @@ public final class CameraManager {
 		}
 	}
 
+	// 控制灯光
+	public void turnOffHandler() {
+		// camera.startPreview();
+        if(camera!=null) {
+            Parameters parameters = camera.getParameters();
+            if (parameters!=null&&!Parameters.FLASH_MODE_OFF.equals(parameters.getFlashMode())) {
+                turnOff(parameters);
+            }
+        }
+	}
+
 	// 开灯
 	private void turnOn(Parameters parameters) {
 		parameters.setFlashMode(Parameters.FLASH_MODE_TORCH);
@@ -258,6 +269,7 @@ public final class CameraManager {
 	 */
 	public void stopPreview() {
 		if (camera != null && previewing) {
+			turnOffHandler();
 			if (!useOneShotPreviewCallback) {
 				camera.setPreviewCallback(null);
 			}

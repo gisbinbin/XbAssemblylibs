@@ -22,4 +22,20 @@
         <attr name="sb_background" format="reference|color"/>
         <attr name="sb_enable_effect" format="reference|boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="ImageCircleView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+        <attr name="fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EditHeadImageView">
+        <attr name="clipType" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="mHorizontalPadding" format="dimension" />
+        <attr name="clipBorderWidth" format="dimension" />
+    </declare-styleable>
 </resources>

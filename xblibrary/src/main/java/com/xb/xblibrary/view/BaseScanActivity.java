@@ -117,8 +117,8 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
             }
         }
         CameraManager.init(getApplication());
-        surfaceView= (SurfaceView)findViewById(initSurfaceView());
-        viewfinderView= (ViewfinderView)findViewById(initViewfinderView());
+        surfaceView = (SurfaceView)findViewById(initSurfaceView());
+        viewfinderView = (ViewfinderView)findViewById(initViewfinderView());
         if(surfaceView==null||viewfinderView==null) {
             Log.e("BaseScanActivity", "BaseScanActivity init fail");
             finish();

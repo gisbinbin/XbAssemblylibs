@@ -144,6 +144,10 @@ public class RefreshSwipeMenuListView  extends ListView implements AbsListView.O
             public void onItemClick(SwipeMenuView view, SwipeMenu menu, int index) {
                 if (mTouchView != null) {
                     mTouchView.smoothCloseMenu();
+                    try {
+                        mTouchView.requestLayout();
+                    } catch (Exception e) {
+                    }
                 }
                 if (mOnMenuItemClickListener != null) {
                     mOnMenuItemClickListener.onMenuItemClick(view.getPosition(), menu, index);

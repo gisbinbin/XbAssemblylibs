@@ -82,12 +82,8 @@ public class RefreshSwipeMenuListActivity extends Activity implements IXListView
             public void onMenuItemClick(final int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        new Handler().postDelayed(new Runnable(){
-                            public void run() {
-                                datas.remove(position);
-                                adapter.notifyDataSetChanged();
-                            }
-                        }, 500);
+                        datas.remove(position);
+                        adapter.notifyDataSetChanged();
                         break;
                 }
             }

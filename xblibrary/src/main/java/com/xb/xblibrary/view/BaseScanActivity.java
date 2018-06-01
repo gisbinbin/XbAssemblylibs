@@ -68,6 +68,7 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
     //光线感应
     private SensorManager sm;
     private Sensor ligthSensor;
+    Boolean mlight=false;
     float lightdata=0;
 
     private CaptureActivityHandler handler;
@@ -82,7 +83,6 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
     private static final float BEEP_VOLUME = 0.10f;
     private boolean vibrate;
 
-    private SharedPreferences mPreferences;
     private int zoomTo=-1;
     private String photo_path="";
 
@@ -95,8 +95,6 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(intiLayout());
         initView();
-        mPreferences = getSharedPreferences("APPSETTING", Context.MODE_PRIVATE);
-        mPreferences.edit();
 
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         ligthSensor = sm.getDefaultSensor(Sensor.TYPE_LIGHT);
@@ -104,6 +102,7 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
         try {
             Intent intent = BaseScanActivity.this.getIntent();
             zoomTo = intent.getExtras().getInt("zoomto");
+            mlight=intent.getBooleanExtra("mylight",false);
         } catch (Exception e) {
             zoomTo=-1;
         }
@@ -324,7 +323,6 @@ public abstract class BaseScanActivity  extends Activity implements SurfaceHolde
             initCamera(holder);
         }
 
-        Boolean mlight=mPreferences.getBoolean("mylight",false);
         if(mlight)
             CameraManager.get().flashHandler();
         else

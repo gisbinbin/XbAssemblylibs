@@ -58,6 +58,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 Intent scanintent = new Intent();
                 scanintent.setClass(MainActivity.this, QRScanActivity.class);
                 scanintent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                scanintent.putExtra("zoomto",1);
+                scanintent.putExtra("mylight",true);
                 startActivityForResult(scanintent, R.id.scan_btn);
                 break;
             case R.id.list_test_btn:

@@ -41,6 +41,7 @@ Step 2. 添加依赖项
 ### 3.1、二维码扫描组件
 ![Alt text](https://github.com/gisbinbin/XbAssemblylibs/blob/master/Screenshots/_20180602145824.jpg)
 Android二维码扫描需要定义一个有数据回传的Activity,在此我们定义一个QRScanActivity继承组件库中的BaseScanActivity布局页面必须包含SurfaceView、com.xb.xblibrary.view.ViewfinderView两个必备控件、其他控件可按需使用，为支持现有所用扫描功能，布局文件如下：
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

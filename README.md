@@ -17,10 +17,10 @@ Step 2. 添加依赖项
 		compile 'com.github.gisbinbin:XbAssemblylibs:1.0.4'
 	}
 	
-1、组件库包含控件
+## 1、组件库包含控件<br>
 组件库包含二维码扫描、列表下拉加载更多，下拉刷新及左滑菜单、时间输入及其他常用自定义控件
 
-2、组件库引入
+## 2、组件库引入<br>
 Step 1. 将JITPACK存储库添加到build.gradle文件中
 将其添加到根目录的build.gradle中
 
@@ -37,8 +37,8 @@ Step 2. 添加依赖项
 		compile 'com.github.gisbinbin:XbAssemblylibs:1.0.4'
 	}
 
-3、控件使用手册<br> 
-3.1、二维码扫描组件
+## 3、控件使用手册<br> 
+### 3.1、二维码扫描组件
 ![Alt text](https://github.com/gisbinbin/XbAssemblylibs/blob/master/Screenshots/_20180602145824.jpg)
 Android二维码扫描需要定义一个有数据回传的Activity,在此我们定义一个QRScanActivity继承组件库中的BaseScanActivity布局页面必须包含SurfaceView、com.xb.xblibrary.view.ViewfinderView两个必备控件、其他控件可按需使用，为支持现有所用扫描功能，布局文件如下：
 

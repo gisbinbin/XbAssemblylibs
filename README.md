@@ -42,6 +42,7 @@ Step 2. 添加依赖项
 
 Android二维码扫描需要定义一个有数据回传的Activity,在此我们定义一个QRScanActivity继承组件库中的BaseScanActivity
 布局页面必须包含SurfaceView、com.xb.xblibrary.view.ViewfinderView两个必备控件、其他控件可按需使用，为支持现有所用扫描功能，布局文件如下：
+
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -80,7 +81,9 @@ Android二维码扫描需要定义一个有数据回传的Activity,在此我们�
             android:text="其他"/>
     </LinearLayout>
 </RelativeLayout>
+
 继承BaseScanActivity初始化指定加载布局文件、SurfaceView控件ID、ViewfinderView控件ID、
+
 @Override
 public int intiLayout() {
     return R.layout.activity_qrscan;
@@ -94,7 +97,9 @@ public int initSurfaceView() {
 public int initViewfinderView() {
     return R.id.myqrscan_view;
 }
+
 到这一步可以开始调用QRScanActivity进行扫描了，调用使用startActivityForResult启动Activity，使用onActivityResult代码如下：
+
 @Override
 public void onClick(View v) {
     switch (v.getId()){
@@ -122,7 +127,11 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             break;
     }
 }
+
 目前还支持扫描灯的开启和关闭、相册二维码图片识别、镜头拉伸、光线感应等功能。
+
 扫描灯的开启和关闭、扫描相册二维码照片可以直接通过监听按钮OpenAndCloseLight()和ScanPicQR()方法。
+
 镜头拉伸通过传入int类型的参数zoomto进行控制：-1代表循环来回拉伸、0代表不拉伸、大于0代表拉伸到原来的倍数；scanintent.putExtra("zoomto",1);
+
 光线感应通过传入boolean类型的参数mylight进行控制：true代表开启光线感应器，在扫描环境较暗时会自动打开扫描灯，false为不开启；scanintent.putExtra("mylight",true);

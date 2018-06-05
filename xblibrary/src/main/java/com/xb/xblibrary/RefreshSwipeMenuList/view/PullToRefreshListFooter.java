@@ -39,7 +39,7 @@ public class PullToRefreshListFooter extends LinearLayout {
         mProgressBar.setVisibility(View.INVISIBLE);
         mHintView.setVisibility(View.INVISIBLE);
         mHintView.setVisibility(View.VISIBLE);
-        mHintView.setText("只有这么多啦！");
+        mHintView.setText(R.string.xlistview_footer_hint_nomore);
     }
 
     public int getState(){
@@ -60,7 +60,7 @@ public class PullToRefreshListFooter extends LinearLayout {
             mHintView.setVisibility(View.VISIBLE);
             mHintView.setText(R.string.xlistview_footer_hint_normal);
             if(!mshowlaodmore){
-                mHintView.setText("只有多啦！");
+                mHintView.setText(R.string.xlistview_footer_hint_nomore);
             }
         }
     }

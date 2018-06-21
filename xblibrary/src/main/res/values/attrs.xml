@@ -38,4 +38,31 @@
         <attr name="mHorizontalPadding" format="dimension" />
         <attr name="clipBorderWidth" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="CustomRowView">
+        <attr name="rowheight" format="dimension" />
+        <attr name="keyvaluekey" format="string" />
+        <attr name="valuevisibility" format="boolean"/>
+        <attr name="keyvaluevalue" format="string" />
+        <attr name="iconvisibility" format="boolean"/>
+        <attr name="iconresources" format="reference" />
+        <attr name="jumpmarkvisibility" format="boolean"/>
+        <attr name="jumpmarresources" format="reference|integer" />
+        <attr name="emphasesmarkvisibility" format="boolean"/>
+        <attr name="splittersvisibility" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CustomTabBtnView">
+        <attr name="Tabiconvisibility" format="boolean"/>
+        <attr name="Tabiconresources" format="reference" />
+        <attr name="selectedTabiconresources" format="reference" />
+        <attr name="Tabiconwidth" format="dimension"/>
+        <attr name="Tabiconheight" format="dimension"/>
+        <attr name="textsize" format="dimension"/>
+        <attr name="textcolor"  format="reference"/>
+        <attr name="selectedtextcolor"  format="reference"/>
+        <attr name="text" format="string|reference" />
+        <attr name="bottomvisibility" format="boolean"/>
+        <attr name="bottombackground" format="reference" />
+        <attr name="selected" format="boolean"/>
+    </declare-styleable>
 </resources>

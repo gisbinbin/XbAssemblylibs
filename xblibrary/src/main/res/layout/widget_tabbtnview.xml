@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/tabbtnview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/tab_icon_layout"
+            android:layout_width="24dip"
+            android:layout_height="24dip">
+            <ImageView
+                android:id="@+id/tabbtnpageimg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"/>
+            <TextView
+                android:id="@+id/tab_texttip"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:textSize="7dip"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_red"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="3"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tab_pagetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="工具"
+                android:textSize="14dip" />
+            <View
+                android:id="@+id/tab_bottomline"
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_marginTop="5dip"
+                android:visibility="gone"
+                android:background="@color/themecolor"/>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

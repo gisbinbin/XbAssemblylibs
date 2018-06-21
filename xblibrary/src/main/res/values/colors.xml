@@ -5,6 +5,13 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="possible_result_points">#c0ffff00</color>
 
+    <color name="themecolor">#0098d4</color>
+    <color name="fontcolor">#222222</color>
+    <color name="fontcolor2">#333333</color>
+    <color name="fontcolor3">#666666</color>
+    <color name="fontcolor4">#999999</color>
+    <color name="pagebgcolor">#efefef</color>
+    <color name="red">#FF0000</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="divisioncolor">#dfdfdf</color>

@@ -28,6 +28,14 @@ public class InputDatePopwindow  extends PopupWindow implements View.OnClickList
     private WheelView wvHour;
     private WheelView wvMintue;
 
+
+    Calendar c = Calendar.getInstance();
+    private int m_MaxYear;
+    private int m_MaxMonth;
+    private int m_MaxDay;
+    private int m_MaxHour;
+    private int m_MaxMintue;
+
     private TextView btnSure;
     private TextView btnCancel;
 
@@ -66,9 +74,19 @@ public class InputDatePopwindow  extends PopupWindow implements View.OnClickList
 
     private OnBirthListener onBirthListener;
 
-    public InputDatePopwindow(final Context context) {
+    public InputDatePopwindow(final Context context,int MaxYear,int MaxMonth,int MaxDay,int MaxHour,int MaxMintue) {
         super(context);
         this.context = context;
+        if(MaxYear>0)
+            m_MaxYear=MaxYear;
+        if(MaxMonth>0)
+            m_MaxMonth=MaxMonth;
+        if(MaxDay>0)
+            m_MaxDay=MaxDay;
+        if(MaxHour>0)
+            m_MaxHour=MaxHour;
+        if(MaxMintue>0)
+            m_MaxMintue=MaxMintue;
         View view= View.inflate(context, R.layout.dialog_inuttime,null);
         wvYear = (WheelView) view.findViewById(R.id.wv_birth_year);
         wvMonth = (WheelView) view.findViewById(R.id.wv_birth_month);
@@ -392,28 +410,49 @@ public class InputDatePopwindow  extends PopupWindow implements View.OnClickList
     }
 
     public String getYear() {
-        Calendar c = Calendar.getInstance();
-        return c.get(Calendar.YEAR)+"";
+        if(m_MaxYear==0) {
+            Calendar c = Calendar.getInstance();
+            return c.get(Calendar.YEAR) + "";
+        }
+        else
+            return m_MaxYear + "";
     }
 
     public String getMonth() {
-        Calendar c = Calendar.getInstance();
-        return c.get(Calendar.MONTH) + 1+"";
+        if (m_MaxMonth == 0){
+            Calendar c = Calendar.getInstance();
+            return c.get(Calendar.MONTH) + 1 + "";
+        }
+        else
+            return m_MaxMonth + "";
     }
 
     public String getDay() {
-        Calendar c = Calendar.getInstance();
-        return c.get(Calendar.DATE)+"";
+        if(m_MaxDay == 0) {
+            Calendar c = Calendar.getInstance();
+            return c.get(Calendar.DATE) + "";
+        }
+        else
+            return m_MaxDay + "";
     }
 
     public String getHour() {
-        Calendar mCalendar= Calendar.getInstance();
-        return mCalendar.get(Calendar.HOUR_OF_DAY )+"";
+        if(m_MaxHour == 0) {
+            Calendar mCalendar = Calendar.getInstance();
+            return mCalendar.get(Calendar.HOUR_OF_DAY) + "";
+        }
+        else {
+            return m_MaxHour + "";
+        }
     }
 
     public String getMintue() {
-        Calendar mCalendar= Calendar.getInstance();
-        return mCalendar.get(Calendar.MINUTE)+"";
+        if(m_MaxMintue == 0) {
+            Calendar mCalendar = Calendar.getInstance();
+            return mCalendar.get(Calendar.MINUTE) + "";
+        }
+        else
+            return m_MaxMintue+"";
     }
 
     public void initData() {

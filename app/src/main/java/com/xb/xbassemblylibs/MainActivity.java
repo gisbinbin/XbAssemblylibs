@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.inputdata_test_btn:
                 final String[] str = new String[10];
-                InputDatePopwindow InputDate = new InputDatePopwindow(MainActivity.this,2020,12,31,23,59);
+                InputDatePopwindow InputDate = new InputDatePopwindow(MainActivity.this);
                 Calendar c = Calendar.getInstance();
                 InputDate.setTime(c.get(Calendar.YEAR)+"", (c.get(Calendar.MONTH) + 1)+"", c.get(Calendar.DAY_OF_MONTH)+"",c.get(Calendar.HOUR_OF_DAY)+"",c.get(Calendar.MINUTE)+"");
                 InputDate.showAtLocation(((LinearLayout)findViewById(R.id.main_panel)), Gravity.BOTTOM, 0, 0);

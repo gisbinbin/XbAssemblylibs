@@ -74,8 +74,17 @@ public class InputDatePopwindow  extends PopupWindow implements View.OnClickList
 
     private OnBirthListener onBirthListener;
 
+    public InputDatePopwindow(final Context context){
+        super(context);
+        newInputDataPopwindow(context,0,0,0,0,0);
+    }
+
     public InputDatePopwindow(final Context context,int MaxYear,int MaxMonth,int MaxDay,int MaxHour,int MaxMintue) {
         super(context);
+        newInputDataPopwindow(context,MaxYear,MaxMonth,MaxDay,MaxHour,MaxMintue);
+    }
+
+    private void newInputDataPopwindow(final Context context,int MaxYear,int MaxMonth,int MaxDay,int MaxHour,int MaxMintue){
         this.context = context;
         if(MaxYear>0)
             m_MaxYear=MaxYear;
